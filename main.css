@@ -28,6 +28,8 @@ background-color: #B74040;
 .title{
 	font-size: 74px;
 	color: white;
+	font: 400 74px/0.5 'Courgette', Helvetica, sans-serif;
+	padding-bottom: 20px;
 }
 
 .itemInput {
