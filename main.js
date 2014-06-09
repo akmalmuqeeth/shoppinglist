@@ -28,7 +28,7 @@ function addListItem(){
 function makeListable(node) {
 	node.on('click',function() {
         // $(this).hide();
-        $(this).addClass('striked');
+        $(this).toggleClass('striked');
     })
 
 	node.dblclick(function(){
