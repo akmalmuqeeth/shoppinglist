@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 //add list item when button is clicked
 $(".addButton").on('click',function() {
-	addListItem();
+		addListItem();
 });
 
 //make all list items respond to click and dblclick
@@ -21,11 +21,14 @@ $("#inputTextBox").keypress(function(key) {
 
 function addListItem(){
 	var inputVal = $("#inputTextBox").val();
-	$("#inputTextBox").val('');
-	var $list = $('.list');
-	var listItem = $("<li>" +inputVal+ "</li>");
-	makeListable(listItem); 
-	$list.append(listItem)
+    if(!isBlank(inputVal)){
+    	$("#inputTextBox").val('');
+		var $list = $('.list');
+		var listItem = $("<li>" +inputVal+ "</li>");
+		makeListable(listItem); 
+		$list.append(listItem)
+    }
+	
 	 
 }
 
@@ -48,5 +51,9 @@ function makeListable(node) {
 
 	})
 
+}
+
+function isBlank(str) {
+    return (!str || /^\s*$/.test(str));
 }
 
