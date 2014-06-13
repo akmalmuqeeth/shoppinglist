@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+ //$(".list li:odd").css("background-color","#B74040");
+
 //add list item when button is clicked
 $(".addButton").on('click',function() {
 	addListItem();
@@ -23,6 +26,7 @@ function addListItem(){
 	var listItem = $("<li>" +inputVal+ "</li>");
 	makeListable(listItem); 
 	$list.append(listItem)
+	 
 }
 
 function makeListable(node) {
@@ -32,7 +36,17 @@ function makeListable(node) {
     })
 
 	node.dblclick(function(){
-		$(this).fadeOut('fast');
-	}) 
+		// $(this).fadeOut('fast');
+		var removedText = $(this).text();
+		var listItem = $("<li>" +removedText+ "</li>");
+		$(".historyList").append(listItem)
+
+		$(this).remove();
+		// $(".list li:odd").css("background-color","#B74040");
+		// $(".completedList").append($(this));
+
+
+	})
+
 }
 

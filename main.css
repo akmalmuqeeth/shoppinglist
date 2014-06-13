@@ -45,23 +45,32 @@ width: 164px;
 height: 40px;
 font-size: 25px;
 border-radius: 2px;
+border: 1px solid black;
 outline: none;
+background: rgb(59,103,158);
 }
 
 .list{
 	list-style-type: none;
-	font-size: 44px;
-	text-align: left;
+font-size: 25px;
+text-align: left;
+margin-top: 20px;
 }
 
 .list li {
 	color: white;
+border: 1px solid white;
+margin: 10px 5px;
+border-radius: 5px;
+padding-left: 20px;
+padding-bottom: 5px;
+width: 484px;
 }
 
 .striked {
 	text-decoration:line-through;
 	font-style: italic;
-	font-size: 40px;
+	font-size: 22px;
 }
 
 .instructions {
@@ -69,4 +78,26 @@ outline: none;
 	font: 400 24px/0.5 'Satisfy', Helvetica, sans-serif;
 	color: #B74040;
 	padding-top: 12px;
+}
+
+.historyInstructions, .todoList{
+	font: 400 24px/0.5 'Average', Helvetica, sans-serif;
+	padding-top: 12px;
+	color: #B74040;
+}
+
+.todoList{
+	padding-top: 30px;
+}
+
+.historyList{
+	list-style-type: none;
+}
+
+.historyList li{
+	color: green;
+	text-align: left;
+font-size: 20px;
+font-style: italic;
+padding-left: 10px;
 }
